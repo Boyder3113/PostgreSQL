@@ -39,3 +39,9 @@ create table salaries(
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
 	PRIMARY KEY (emp_no)
 );
+
+create table titles(
+	title_id varchar NOT NULL,
+	title varchar NOT NULL,
+	PRIMARY KEY (title_id)
+);
