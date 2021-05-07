@@ -47,3 +47,11 @@ On e.emp_no = de.emp_no
 Inner Join departments as d
 On de.dept_no = d.dept_no
 Order By d.dept_name;
+
+--List first name, last name, and sex for employees whose first name is 
+--"Hercules" and last names begin with "B."
+
+Select first_name, last_name, sex
+From employees
+Where first_name = 'Hercules' and last_name like 'B%'
+Order By last_name;
