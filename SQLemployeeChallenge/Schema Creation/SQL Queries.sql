@@ -33,3 +33,17 @@ On d.dept_no = dm.dept_no
 Join employees as e
 On dm.emp_no = e.emp_no
 Order By d.dept_no;
+
+--List the department of each employee with the following information: 
+--employee number, last name, first name, and department name.
+
+Select d.dept_name,
+	e.emp_no,
+	e.first_name,
+	e.last_name
+From Employees as e
+Inner Join dept_emp as de
+On e.emp_no = de.emp_no
+Inner Join departments as d
+On de.dept_no = d.dept_no
+Order By d.dept_name;
