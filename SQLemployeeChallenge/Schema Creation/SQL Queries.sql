@@ -55,3 +55,17 @@ Select first_name, last_name, sex
 From employees
 Where first_name = 'Hercules' and last_name like 'B%'
 Order By last_name;
+
+--List all employees in the Sales department
+--including their employee number, last name, first name, and department name.
+
+Select e.emp_no,
+	e.first_name,
+	e.last_name,
+	d.dept_name
+From Employees as e 
+Join dept_emp as dm
+On e.emp_no = dm.emp_no
+Join Departments as d
+On d.dept_no = dm.dept_no
+Where d.dept_name = 'Sales';
