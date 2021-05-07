@@ -69,3 +69,18 @@ On e.emp_no = dm.emp_no
 Join Departments as d
 On d.dept_no = dm.dept_no
 Where d.dept_name = 'Sales';
+
+--List all employees in the Sales and Development departments, including their 
+--employee number, last name, first name, and department name.
+
+Select e.emp_no,
+	e.first_name,
+	e.last_name,
+	d.dept_name
+From employees as e
+Join dept_emp as de
+On e.emp_no = de.emp_no
+Join departments as d
+On d.dept_no = de.dept_no
+Where d.dept_name = 'Sales' or d.dept_name = 'Development'
+Order By d.dept_name;
