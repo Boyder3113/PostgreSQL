@@ -19,6 +19,7 @@ This repository contains 6 CSV "tables" and two SQL files which use the CSV's to
 
 There is also an entity relationship diagram (ERD) that is based off of the provided CSV's.
 
+
 <!-- App Usage -->
 
 The "Schema Creation" folder contains two SQL files; "Table Schema SQL" and "SQL Queries". Running "Table Schema SQL" will create the empty tables needed to import in the CSV's. Once the empty schema is created use PostgreSQL's table import function to populate the empty tables with the CSV data.
